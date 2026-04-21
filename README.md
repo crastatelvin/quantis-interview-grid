@@ -262,7 +262,6 @@ npm run build
 
 - Use a strong `JWT_SECRET` (32+ chars) for production.
 - Redis is optional; fallback works without it.
-- If screenshot images do not render on GitHub, move them into `docs/screenshots/` and reference relative paths.
 
 ---
 
