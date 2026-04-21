@@ -58,11 +58,11 @@ Core goals:
 <br/>
 <br/>
 
-<img width="1366" alt="Quantis Landing" src="./docs/screenshots/{415898BB-266A-4E9A-868F-34968F4B38D8}.png" />
+<img width="1366" alt="Quantis Setup View" src="./docs/screenshots/{458AE73E-E84E-4F9B-9C23-B9853F4066F1}.png" />
 
 <br/><br/>
 
-<img width="1366" alt="Quantis Setup View" src="./docs/screenshots/{458AE73E-E84E-4F9B-9C23-B9853F4066F1}.png" />
+<img width="1366" alt="Quantis Landing" src="./docs/screenshots/{415898BB-266A-4E9A-868F-34968F4B38D8}.png" />
 
 <br/><br/>
 
