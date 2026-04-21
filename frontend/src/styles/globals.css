@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap");
+
+:root {
+  --void: #010409;
+  --card: #161b22;
+  --blue: #1d6df5;
+  --blue-dim: rgba(29, 109, 245, 0.1);
+  --text: #e6edf3;
+  --green: #3dd68c;
+  --amber: #f0a429;
+  --red: #f05454;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--void);
+  color: var(--text);
+  font-family: Rajdhani, sans-serif;
+  overflow-x: hidden;
+}
+
+.card {
+  background: linear-gradient(160deg, rgba(22,27,34,0.9), rgba(12,16,20,0.82));
+  border: 1px solid rgba(29, 109, 245, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 40px rgba(10, 20, 40, 0.4);
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 420ms cubic-bezier(0.22, 1, 0.36, 1), border-color 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+textarea, button, select { font-family: Rajdhani, sans-serif; }
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+}
+
+.scene-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at top, rgba(33, 89, 170, 0.18), transparent 55%);
+}
+
+.content-layer {
+  position: relative;
+  z-index: 2;
+}
+
+.glass-panel {
+  background: linear-gradient(145deg, rgba(18, 28, 45, 0.42), rgba(7, 12, 20, 0.28));
+  border: 1px solid rgba(111, 178, 255, 0.35);
+  box-shadow:
+    0 20px 60px rgba(0, 20, 50, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(16px) saturate(140%);
+}
+
+.calligraphic {
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 1px;
+}
+
+.cinzel {
+  font-family: "Cinzel", serif;
+}
+
+button {
+  border: 1px solid rgba(93, 166, 255, 0.35);
+  background: linear-gradient(120deg, rgba(20, 42, 73, 0.9), rgba(29, 109, 245, 0.4));
+  color: #fff;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+button:hover:enabled {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(29, 109, 245, 0.35);
+}
+
+textarea {
+  border-radius: 8px;
+}
+
