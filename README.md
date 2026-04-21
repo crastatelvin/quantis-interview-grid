@@ -90,14 +90,14 @@ Core goals:
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
-│                 React 3D Interview UI                      │
-│  setup • interview • report • auth/history • voice mode    │
+│                 React 3D Interview UI                       │
+│  setup • interview • report • auth/history • voice mode     │
 └───────────────┬─────────────────────────────────────────────┘
                 │ HTTP + Browser Voice APIs
 ┌───────────────▼─────────────────────────────────────────────┐
 │                      FastAPI Backend                        │
 │                                                             │
-│  /auth/*, /history*   identity + run history               │
+│  /auth/*, /history*   identity + run history                │
 │  /setup               JD analysis + question generation     │
 │  /evaluate            answer capture (per-question)         │
 │  /report              full scoring + final insights         │
