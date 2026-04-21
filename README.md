@@ -89,21 +89,32 @@ Core goals:
 ## 🏗️ Architecture
 
 ```text
-React Frontend (3D UI + Voice UX)
-  ├─ Setup / Interview / Report pages
-  ├─ Auth + History panel
-  └─ Resume gap analysis UI
-          │
-          │ HTTP
-          ▼
-FastAPI Backend
-  ├─ /auth/*, /history*, /setup, /evaluate, /report
-  ├─ /resume-gap-analysis
-  ├─ /metrics + /observability/summary
-  └─ Groq client (retry/backoff + breaker)
-          │
-          ├─ SQLAlchemy (sessions, users, runs)
-          └─ Redis cache (optional)
+┌─────────────────────────────────────────────────────────────┐
+│                 React 3D Interview UI                      │
+│  setup • interview • report • auth/history • voice mode    │
+└───────────────┬─────────────────────────────────────────────┘
+                │ HTTP + Browser Voice APIs
+┌───────────────▼─────────────────────────────────────────────┐
+│                      FastAPI Backend                        │
+│                                                             │
+│  /auth/*, /history*   identity + run history               │
+│  /setup               JD analysis + question generation     │
+│  /evaluate            answer capture (per-question)         │
+│  /report              full scoring + final insights         │
+│  /resume-gap-analysis resume/JD fit + action plan           │
+│  /metrics             Prometheus scrape endpoint            │
+│  /observability/*     request latency and error summaries   │
+└───────────────┬─────────────────────────────────────────────┘
+                │
+      ┌─────────▼─────────┐          ┌────────────────────────┐
+      │ SQLAlchemy (DB)   │          │ Groq API (LLM provider)│
+      │ sessions/users/runs│         │ structured AI responses│
+      └─────────┬─────────┘          └────────────────────────┘
+                │
+      ┌─────────▼─────────┐
+      │ Redis Cache       │
+      │ optional hot reads│
+      └───────────────────┘
 ```
 
 ---
