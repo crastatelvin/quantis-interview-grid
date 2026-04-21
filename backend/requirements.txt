@@ -8,3 +8,8 @@ sqlalchemy
 psycopg[binary]
 redis
 alembic
+PyJWT
+passlib[bcrypt]
+prometheus-client
+python-multipart
+pypdf

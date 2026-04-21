@@ -24,6 +24,8 @@ class Settings:
         "sqlite:///./quantis_interview_grid.db",
     )
     redis_url: str = os.getenv("REDIS_URL", "redis://localhost:6379/0")
+    jwt_secret: str = os.getenv("JWT_SECRET", "change_me")
+    jwt_expire_hours: int = int(os.getenv("JWT_EXPIRE_HOURS", "72"))
 
 
 settings = Settings()

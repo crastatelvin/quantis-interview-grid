@@ -108,7 +108,13 @@ export default function AnswerTerminal({ onSubmit, loading, disabled, micEnabled
         style={{ marginTop: 10 }}
         onClick={() => {
           if (!answer.trim()) return;
-          onSubmit(answer.trim());
+          onSubmit(
+            answer.trim(),
+            finalTranscript.map((text, idx) => ({
+              t: Date.now() + idx,
+              text,
+            }))
+          );
           setAnswer("");
           setLiveTranscript("");
           setFinalTranscript([]);

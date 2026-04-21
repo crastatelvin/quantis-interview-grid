@@ -20,6 +20,7 @@ class EvaluateRequest(BaseModel):
 
 class ReportRequest(BaseModel):
     session_id: str
+    transcript: list[dict] | None = None
 
 
 class Session(BaseModel):

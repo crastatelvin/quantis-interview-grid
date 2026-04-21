@@ -20,10 +20,14 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: #9bc5ff;
+}
+
 .card {
   background: linear-gradient(160deg, rgba(22,27,34,0.9), rgba(12,16,20,0.82));
   border: 1px solid rgba(29, 109, 245, 0.2);
-  border-radius: 8px;
+  border-radius: 14px;
   padding: 1rem;
   backdrop-filter: blur(10px);
   box-shadow: 0 12px 40px rgba(10, 20, 40, 0.4);
@@ -31,6 +35,13 @@ body {
 }
 
 textarea, button, select { font-family: Rajdhani, sans-serif; }
+input, select, textarea {
+  background: rgba(8, 14, 26, 0.92);
+  color: #ecf3ff;
+  border: 1px solid rgba(102, 153, 245, 0.35);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
 
 .app-shell {
   position: relative;
@@ -58,6 +69,13 @@ textarea, button, select { font-family: Rajdhani, sans-serif; }
   backdrop-filter: blur(16px) saturate(140%);
 }
 
+.glass-heavy {
+  background: linear-gradient(145deg, rgba(8, 16, 31, 0.72), rgba(6, 10, 18, 0.58));
+  border: 1px solid rgba(126, 174, 255, 0.52);
+  box-shadow: 0 22px 70px rgba(10, 22, 54, 0.5), inset 0 0 30px rgba(42, 88, 181, 0.15);
+  backdrop-filter: blur(18px) saturate(150%);
+}
+
 .calligraphic {
   font-family: "Great Vibes", cursive;
   letter-spacing: 1px;
@@ -68,21 +86,77 @@ textarea, button, select { font-family: Rajdhani, sans-serif; }
 }
 
 button {
-  border: 1px solid rgba(93, 166, 255, 0.35);
-  background: linear-gradient(120deg, rgba(20, 42, 73, 0.9), rgba(29, 109, 245, 0.4));
+  border: 1px solid rgba(109, 170, 255, 0.45);
+  background: linear-gradient(120deg, rgba(22, 46, 84, 0.96), rgba(56, 107, 219, 0.62));
   color: #fff;
-  padding: 0.55rem 1rem;
-  border-radius: 8px;
+  padding: 0.6rem 1.05rem;
+  border-radius: 10px;
   cursor: pointer;
-  transition: transform 150ms ease, box-shadow 150ms ease;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
 button:hover:enabled {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 30px rgba(29, 109, 245, 0.35);
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 12px 32px rgba(55, 124, 255, 0.42);
+  border-color: rgba(154, 198, 255, 0.8);
 }
 
 textarea {
-  border-radius: 8px;
+  border-radius: 10px;
+}
+
+.container {
+  width: min(1200px, 94vw);
+  margin: 0 auto;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Cinzel", serif;
+  letter-spacing: 1px;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border: 1px solid rgba(90, 138, 220, 0.3);
+  border-radius: 12px;
+}
+
+.pill {
+  border-radius: 999px;
+  padding: 8px 14px;
+  border: 1px solid rgba(126, 168, 255, 0.35);
+  background: rgba(18, 32, 61, 0.6);
+  color: #eaf2ff;
+}
+
+.mock-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 30% 30%, rgba(128, 177, 255, 0.45), rgba(38, 76, 145, 0.3));
+  border: 1px solid rgba(121, 178, 255, 0.4);
+  box-shadow: 0 0 18px rgba(74, 134, 255, 0.32);
+}
+
+.landing-grid {
+  display: grid;
+  grid-template-columns: 1fr 310px;
+  gap: 14px;
+}
+
+@media (max-width: 980px) {
+  .landing-grid {
+    grid-template-columns: 1fr;
+  }
 }
 

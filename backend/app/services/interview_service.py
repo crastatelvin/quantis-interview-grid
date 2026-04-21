@@ -89,6 +89,9 @@ class InterviewService:
         consistency = round(100 - (max(question_totals) - min(question_totals))) if question_totals else 0
         narrative = self._generate_report_narrative(session, avg_scores, final_score)
         return {
+            "session_id": session_id,
+            "interview_type": session.interview_type,
+            "role_title": session.jd_analysis.get("role_title", "Unknown"),
             "final_score": final_score,
             "avg_scores": avg_scores,
             "grade": "A" if final_score >= 85 else "B" if final_score >= 70 else "C" if final_score >= 55 else "D" if final_score >= 40 else "F",
@@ -109,6 +112,41 @@ class InterviewService:
                 ),
             },
             "preparation_resources": self._resource_suggestions(session.interview_type, min(avg_scores, key=avg_scores.get)),
+        }
+
+    def resume_jd_gap(self, resume_text: str, jd_text: str) -> dict[str, Any]:
+        fallback = {
+            "matched_skills": [],
+            "missing_skills": [],
+            "fit_score": 50,
+            "risk_areas": ["Insufficient structured evidence in resume summary."],
+            "action_plan": ["Add quantified outcomes for core projects.", "Highlight role-specific stack alignment."],
+        }
+        if not self.ai_client.available():
+            return fallback
+        prompt = f"""
+Return valid JSON only:
+{{
+  "matched_skills": ["..."],
+  "missing_skills": ["..."],
+  "fit_score": 0-100,
+  "risk_areas": ["...", "..."],
+  "action_plan": ["...", "...", "..."]
+}}
+
+RESUME:
+{resume_text[:5000]}
+
+JOB_DESCRIPTION:
+{jd_text[:5000]}
+"""
+        parsed = self.ai_client.chat_json(prompt, fallback)
+        return {
+            "matched_skills": [s for s in parsed.get("matched_skills", []) if isinstance(s, str)][:10],
+            "missing_skills": [s for s in parsed.get("missing_skills", []) if isinstance(s, str)][:10],
+            "fit_score": max(0, min(100, int(parsed.get("fit_score", 50)))),
+            "risk_areas": [s for s in parsed.get("risk_areas", []) if isinstance(s, str)][:5],
+            "action_plan": [s for s in parsed.get("action_plan", []) if isinstance(s, str)][:5],
         }
 
     def has_session(self, session_id: str) -> bool:

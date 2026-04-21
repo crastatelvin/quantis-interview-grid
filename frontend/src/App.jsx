@@ -13,7 +13,22 @@ export default function App() {
       <DynamicScene phase={interview.phase} />
       <div className="content-layer">
         {interview.phase === "setup" && (
-          <SetupPage onStart={interview.startInterview} loading={interview.loading} error={interview.error} />
+          <SetupPage
+            onStart={interview.startInterview}
+            loading={interview.loading}
+            error={interview.error}
+            onRegister={interview.register}
+            onLogin={interview.login}
+            authReady={interview.authReady}
+            history={interview.history}
+            onRefreshHistory={interview.refreshHistory}
+            onRunGapAnalysis={interview.runGapAnalysis}
+            gapAnalysis={interview.gapAnalysis}
+            onGetRunDetail={interview.getRunDetail}
+            historyDetail={interview.historyDetail}
+            onRefreshObservability={interview.refreshObservability}
+            observability={interview.observability}
+          />
         )}
         {interview.phase === "interview" && (
           <InterviewPage
@@ -23,6 +38,7 @@ export default function App() {
             evaluations={interview.evaluations}
             loading={interview.loading}
             onSubmit={interview.submitAnswer}
+            onTranscript={interview.appendTranscript}
             error={interview.error}
           />
         )}
