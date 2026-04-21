@@ -55,17 +55,22 @@ Core goals:
 
 ## 💻 Application Preview
 
-> Screenshots are currently referenced from local workspace assets.  
-> For GitHub rendering, place these images under `docs/screenshots/` and update paths.
-
 <br/>
 <br/>
 
-<img width="1366" alt="Quantis Landing" src="C:\Users\Administrator\.cursor\projects\c-Users-Administrator-Desktop-New-folder\assets\c__Users_Administrator_AppData_Roaming_Cursor_User_workspaceStorage_735ba85a0b914dd8a8fa01d93bdb27c9_images_af318aa4-53f0-4c92-b61c-509b9a8dadea-889c58f6-76e9-4433-bb17-f13708af093d.png" />
+<img width="1366" alt="Quantis Landing" src="./docs/screenshots/{415898BB-266A-4E9A-868F-34968F4B38D8}.png" />
 
 <br/><br/>
 
-<img width="1366" alt="Quantis Interview Screen" src="C:\Users\Administrator\.cursor\projects\c-Users-Administrator-Desktop-New-folder\assets\c__Users_Administrator_AppData_Roaming_Cursor_User_workspaceStorage_735ba85a0b914dd8a8fa01d93bdb27c9_images_22c49adf-2982-4e32-98e6-5058e15c32ae-2ba35784-fbb7-40f1-8b8b-f8d8522b0d9d.png" />
+<img width="1366" alt="Quantis Setup View" src="./docs/screenshots/{458AE73E-E84E-4F9B-9C23-B9853F4066F1}.png" />
+
+<br/><br/>
+
+<img width="1366" alt="Quantis Interview Screen" src="./docs/screenshots/{8DADA511-E869-411E-B586-B7FD4E60EFEE}.png" />
+
+<br/><br/>
+
+<img width="1366" alt="Quantis Interview Alternate" src="./docs/screenshots/{02B74514-60CF-47BF-B72D-8E6E6408DDA4}.png" />
 
 ---
 
@@ -267,8 +272,8 @@ npm run build
 
 ## 📜 License
 
-This project is currently private/portfolio-oriented.  
-Add your preferred open-source license (MIT/Apache-2.0) in `LICENSE` before broad public reuse.
+This repository does not currently include a `LICENSE` file.
+Until a license is added, all rights are reserved by the author.
 
 ---
 
