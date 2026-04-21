@@ -1,6 +1,6 @@
 <div align="center">
 
-# QUANTIS INTERVIEW GRID
+# 🌌 QUANTIS INTERVIEW GRID
 
 ### Immersive AI Interview Simulation Platform
 
@@ -15,28 +15,32 @@
 
 > **Quantis Interview Grid** transforms a job description into a role-specific interview simulation with dynamic questions, voice interaction, structured scoring, rich performance analytics, and personalized preparation resources.
 
+<br/>
+
+![3D Interface](https://img.shields.io/badge/Immersive-3D%20Interview%20UI-blue?style=for-the-badge) ![Voice Mode](https://img.shields.io/badge/Voice-STT%20%2B%20TTS-purple?style=for-the-badge) ![Scoring Engine](https://img.shields.io/badge/Scoring-Structured%20Analytics-00b894?style=for-the-badge)
+
 </div>
 
 ---
 
-## Table of Contents
+## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Application Preview](#application-preview)
-- [Features](#features)
-- [Architecture](#architecture)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Reference](#api-reference)
-- [Configuration](#configuration)
-- [Testing](#testing)
-- [Notes](#notes)
+- [Overview](#-overview)
+- [Application Preview](#-application-preview)
+- [Features](#-features)
+- [Architecture](#-architecture)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [API Reference](#-api-reference)
+- [Configuration](#-configuration)
+- [Testing](#-testing)
+- [Security Notes](#-security-notes)
 
 ---
 
-## Overview
+## 🧠 Overview
 
 Quantis is designed to feel like a real interview environment, not a static demo.
 
@@ -49,10 +53,13 @@ Core goals:
 
 ---
 
-## Application Preview
+## 💻 Application Preview
 
 > Screenshots are currently referenced from local workspace assets.  
 > For GitHub rendering, place these images under `docs/screenshots/` and update paths.
+
+<br/>
+<br/>
 
 <img width="1366" alt="Quantis Landing" src="C:\Users\Administrator\.cursor\projects\c-Users-Administrator-Desktop-New-folder\assets\c__Users_Administrator_AppData_Roaming_Cursor_User_workspaceStorage_735ba85a0b914dd8a8fa01d93bdb27c9_images_af318aa4-53f0-4c92-b61c-509b9a8dadea-889c58f6-76e9-4433-bb17-f13708af093d.png" />
 
@@ -62,24 +69,24 @@ Core goals:
 
 ---
 
-## Features
+## ✨ Features
 
 | Feature | Description |
 |---|---|
-| Dynamic Role-Based Questions | Uses JD analysis + interview type to generate realistic prompts |
-| Immersive 3D UI | Live Three.js scene, glass panels, animated score visuals |
-| Voice Interview Mode | STT input, TTS question playback, live transcript capture |
-| Structured Scoring | Relevance, clarity, depth, structure, confidence |
-| Final Report Intelligence | Metrics, hiring likelihood, next steps, prep resources |
-| Auth & History | Register/login, stored runs, run detail retrieval |
-| Resume Gap Analysis | Resume vs JD fit score, missing skills, action plan |
-| Observability | Prometheus metrics endpoint + summary API |
-| Resilient LLM Calls | Retry/backoff + circuit breaker behavior for Groq calls |
-| Session Persistence | DB-backed sessions with optional Redis cache fast-path |
+| 🎯 **Dynamic Role-Based Questions** | Uses JD analysis + interview type to generate realistic prompts |
+| 🌌 **Immersive 3D UI** | Live Three.js scene, glass panels, animated score visuals |
+| 🎙️ **Voice Interview Mode** | STT input, TTS question playback, live transcript capture |
+| 📊 **Structured Scoring** | Relevance, clarity, depth, structure, confidence |
+| 📄 **Final Report Intelligence** | Metrics, hiring likelihood, next steps, prep resources |
+| 🔐 **Auth & History** | Register/login, stored runs, run detail retrieval |
+| 📎 **Resume Gap Analysis** | Resume vs JD fit score, missing skills, action plan |
+| 📈 **Observability** | Prometheus metrics endpoint + summary API |
+| 🔄 **Resilient LLM Calls** | Retry/backoff + circuit breaker behavior for Groq calls |
+| 🗄️ **Session Persistence** | DB-backed sessions with optional Redis cache fast-path |
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 ```text
 React Frontend (3D UI + Voice UX)
@@ -101,7 +108,7 @@ FastAPI Backend
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -118,7 +125,7 @@ FastAPI Backend
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 .
@@ -154,7 +161,7 @@ FastAPI Backend
 
 ---
 
-## Installation
+## 🚀 Installation
 
 ### Prerequisites
 - Python 3.12+
@@ -183,7 +190,7 @@ npm start
 
 ---
 
-## Usage
+## 💻 Usage
 
 1. Open `http://localhost:3000`
 2. Select interview type + add JD text (or drop file)
@@ -193,7 +200,7 @@ npm start
 
 ---
 
-## API Reference
+## 🔌 API Reference
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -211,7 +218,7 @@ npm start
 
 ---
 
-## Configuration
+## ⚙️ Configuration
 
 Set values in `backend/.env`:
 
@@ -228,7 +235,7 @@ JWT_EXPIRE_HOURS=72
 
 ---
 
-## Testing
+## 🧪 Testing
 
 ```bash
 cd backend
@@ -240,9 +247,26 @@ npm run build
 
 ---
 
-## Notes
+## 🔒 Security Notes
 
 - Use a strong `JWT_SECRET` (32+ chars) for production.
 - Redis is optional; fallback works without it.
 - If screenshot images do not render on GitHub, move them into `docs/screenshots/` and reference relative paths.
+
+---
+
+## 📜 License
+
+This project is currently private/portfolio-oriented.  
+Add your preferred open-source license (MIT/Apache-2.0) in `LICENSE` before broad public reuse.
+
+---
+
+<div align="center">
+
+Built with ❤️ by [Crasta Telvin](https://github.com/crastatelvin)
+
+⭐ Star this repo if you find it useful!
+
+</div>
 
